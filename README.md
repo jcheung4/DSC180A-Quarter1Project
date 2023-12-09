@@ -26,15 +26,27 @@ git checkout finetune
 cd ..
 ```
 
-### Create Training and Validation Datasets
-After adding `images` folder to root directory, run:
+### Create Training/Validation Datasets and Prepare files to train model
+After adding `images` folder to root directory and cloning the DETR repository, run
 ```
-python scripts/train_val_split.py
+python scripts/initialize.py
 ```
-*MORE ON RESULT*
+This will download the model's "base" which will be used in the training process.
 
-### Training and Fine-Tuning the Model:
-Run the cells in the `train_detr.ipynb` in order to train and fine-tune the model.
+### Train the Model
+Run the following:
+```
+python detr/main.py \
+  --dataset_file "custom" \
+  --coco_path "data" \
+  --output_dir "outputs" \
+  --resume "detr/detr-r50_no-classs-head.pth" \
+  --num_classes 3 \
+  --epochs 1 \
+  --device cuda
+```
+The parameters preceded by "--" may be modified accordingly such as the number of epochs to train for or what directory output files will be saved to.
+
 
 # Project Structure
 
