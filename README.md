@@ -40,7 +40,7 @@ python detr/main.py \
   --dataset_file "custom" \
   --coco_path "data" \
   --output_dir "outputs" \
-  --resume "detr/detr-r50_no-classs-head.pth" \
+  --resume "detr/detr-r50_no-class-head.pth" \
   --num_classes 3 \
   --epochs 1 \
   --device cuda
