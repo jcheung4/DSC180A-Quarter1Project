@@ -53,26 +53,32 @@ The parameters preceded by "--" may be modified accordingly such as the number o
 > [!IMPORTANT]
 > A GPU is required to timely train the model.
 
+After the model is finished training, output files will be saved to the `outputs` directory.
+
 ### Visualize Model Results
 Run the cells within the `Model-Visualization.ipynb` file to display image examples of training/validation data as well as graphs on specfiic fields of interest.
 
 # Project Structure
 
 ```
-├── data/               <- Local data files only (do not commit)
+├── data/                 <- Local data files only (do not commit)
 │   ├── annotations
 │       ├── custom_train.json
 │       ├── custom_val.json
 │   ├── training_imgs
 │   ├── validation_imgs
 │
-├── scripts/            <- Python scripts to run in command line
+├── outputs/              <- Output from model training (do not commit)
 │
-├── .gitignore          <- Git ignore file
+├── scripts/              <- Python scripts to run in command line
 │
-├── environment.yml     <- Conda environment file
+├── .gitignore            <- Git ignore file
 │
-└── README.md           <- The top-level README for repo
+├── Model-Visualization.ipynb  <- Jupyter Notebook for visualizing model results
+│
+├── environment.yml       <- Conda environment file
+│
+└── README.md             <- The top-level README for repo
 ```
 
 
