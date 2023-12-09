@@ -49,7 +49,7 @@ python detr/main.py \
   --epochs 1 \
   --device cuda
 ```
-The parameters preceded by "--" may be modified accordingly such as the number of epochs to train for or what directory output files will be saved to.
+The parameters preceded by "--" may be modified accordingly such as the number of epochs to train for.
 > [!IMPORTANT]
 > A GPU is required to timely train the model.
 
