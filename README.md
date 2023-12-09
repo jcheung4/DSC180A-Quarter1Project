@@ -34,7 +34,8 @@ python scripts/initialize.py
 This will download the model's "base" which will be used in the training process.
 
 ### Train the Model
-Run the following:
+In order to train the model, run the following:
+> **_NOTE:_**  A GPU is required to timely train the model.
 ```
 python detr/main.py \
   --dataset_file "custom" \
@@ -47,11 +48,18 @@ python detr/main.py \
 ```
 The parameters preceded by "--" may be modified accordingly such as the number of epochs to train for or what directory output files will be saved to.
 
+### Visualize Model Results
+Run the cells within the `Model-Visualization.ipynb` file to display image examples of training/validation data as well as graphs on specfiic fields of interest.
 
 # Project Structure
 
 ```
 ├── data/               <- Local data files only (do not commit)
+│   ├── annotations
+│       ├── custom_train.json
+│       ├── custom_val.json
+│   ├── training_imgs
+│   ├── validation_imgs
 │
 ├── scripts/            <- Python scripts to run in command line
 │
