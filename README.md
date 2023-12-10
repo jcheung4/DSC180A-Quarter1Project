@@ -35,7 +35,7 @@ After adding `images` folder to root directory and cloning the DETR repository, 
 ```
 python scripts/initialize.py
 ```
-This will download the model's "base" which will be used in the training process.
+This will download the model's "base" and split the data into training/validation sets based on the COCO json annotations.
 
 ### Train the Model
 In order to train the model, run the following:
